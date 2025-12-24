@@ -15,14 +15,19 @@ app.get("/", async (req, res) => {
       m.name.toLowerCase().includes("bihar") &&
       m.name.toLowerCase().includes("arunachal pradesh")
     );  
-    console.log(result)
+    console.log(result.name)
     const teamInfo = result.teamInfo
+
+    const teamName =teamInfo.name
     let otherFlag = teamInfo.find((team) => team.name.toLowerCase().includes('arunachal pradesh'))
     let biharFlag = teamInfo.find((team) => team.name.toLowerCase().includes('bihar'))
     const score = result.score
     const otherScore = score.find((team) => team.inning.toLowerCase().includes('arunachal pradesh'))
     const biharScore = score.find((team) => team.inning.toLowerCase().includes('bihar')) ?? 'Break'
     res.render('index.ejs', {
+      venue:result.venue,
+      date:result.date,
+      name:result.name,
       data: result,
       biharRun: biharScore,
       otherRun: otherScore,
