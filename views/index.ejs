@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 45vw;
+            margin-left: 10vw ;
+            height: 75vh;
+             border:solid black;
+             flex-direction: column;
+             display: flex;
+             
+        }
+        .status{
+            text-align: center;
+        }
+          .block{
+                margin-top: 20px;
+                width: 45vw;
+                display: flex;
+                justify-content:space-around;
+                
+             
+               
+               
+            }
+          
+          img{
+              display:block;
+          }
+          .india{
+
+           display: flex;
+           width: 20 vw;
+           gap: 30px;
+           flex-wrap: wrap;
+          }
+          .other{
+
+           display: flex;
+           width: 20 vw;
+           gap: 30px;
+           flex-wrap: wrap;
+          }
+         
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div class="block">
+
+
+        <div class="india">
+          <div class="india-flag"> <img src="<%= biharflag.img %> "alt= "other flag"></div>  
+           <div class="ind-score"><p> <%= biharRun.r %>\<%= biharRun.w %> <br> (<%= biharRun.o %>)</p>
+           </div> 
+        </div>
+        <div class="other">
+            <div class="other-score"> <p> <%= otherRun.r %>\<%= otherRun.w %><br> (<%= otherRun.o %>)</p></div>
+           
+            
+          <div class="other-flag"> <img src="<%= otherflag.img %> "alt= "other flag"></div>  
+
+          </div>
+             
+          
+    
+
+
+    </div>
+    
+    <div class="status">
+        <p> <%= data.status  %></p>
+    </div>
+    </div>
+</body>
+</html>
