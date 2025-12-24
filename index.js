@@ -9,7 +9,7 @@ app.get("/", async (req, res) => {
 
   try {
     const url = await axios.get(`https://api.cricapi.com/v1/currentMatches?apikey=8262d730-802f-42ae-9351-98f0f4cba87a&offset=0`)
-    const matches = url.data.data;   // ✔ Correct way
+    const matches = url.data.data;  
 
     const result = matches.find((m) =>
       m.name.toLowerCase().includes("bihar") &&
